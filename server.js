@@ -8,7 +8,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true }));
-app.use('./api', api);
+app.use('/api', api);
 
 app.use(express.static('public'));
 
@@ -21,5 +21,5 @@ app.get('/notes', (req, res) => {
 });
 
 app.listen(PORT, () => 
-    console.log(`App listening at http://localhostL${PORT}`)
+    console.log(`App listening at http://localhost:${PORT}`)
 );
