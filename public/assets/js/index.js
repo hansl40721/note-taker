@@ -72,21 +72,25 @@ const renderActiveNote = () => {
   }
 };
 
-const handleNoteSave = () => {
-  const newNote = {
-    title: noteTitle.value,
-    text: noteText.value
-  };
-  saveNote(newNote).then(() => {
-    getAndRenderNotes();
+const handleNoteSave = async () => {
+  try {
+    const newNote = {
+      title: noteTitle.value,
+      text: noteText.value
+    };
+    await saveNote(newNote)
+    await getAndRenderNotes();
     renderActiveNote();
-  });
+  } catch(err) {
+    console.error(err);
+  }
 };
 
 // Delete the clicked note
 const handleNoteDelete = (e) => {
   // Prevents the click listener for the list from being called when the button inside of it is clicked
   e.stopPropagation();
+  console.log('Deleting note');
 
   const note = e.target;
   const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
