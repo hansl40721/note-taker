@@ -25,6 +25,11 @@
 
   Install your dependencies and run npm start in your terminal, then open the app in your default browser.
 
+  [Live Site] [https://git.heroku.com/hansl40721-note-taker.git](https://hansl40721-note-taker-61a8d9997fad.herokuapp.com/)
+
+  ![Screenshot 2024-02-15 134307](https://github.com/hansl40721/note-taker/assets/123116520/48f5b80e-8028-46c9-b0f0-3e4246c796b4)
+
+
   ## Credits 
 
   NA
